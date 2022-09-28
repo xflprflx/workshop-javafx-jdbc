@@ -81,9 +81,9 @@ public class DepartmentFormController implements Initializable {
 	}
 	
 	private void notifyDataChangeListeners() {
-		for(DataChangeListener listener : dataChangeListeners) {
+		for (DataChangeListener listener : dataChangeListeners) {
 			listener.onDataChanged();
-		}	
+		}
 	}
 
 	private Department getFormData() {
@@ -125,7 +125,7 @@ public class DepartmentFormController implements Initializable {
 			throw new IllegalStateException("Entity was null");
 		}
 		txtId.setText(String.valueOf(entity.getId()));
-		txtId.setText(entity.getName());
+		txtName.setText(entity.getName());
 	}
 	
 	private void setErrorMessages(Map<String, String> errors) {
